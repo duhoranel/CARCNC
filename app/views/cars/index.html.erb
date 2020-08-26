@@ -1,1 +1,10 @@
-<h1>hello </h1>
+<h1>Car's list </h1>
+<p>Here's the list of the available cars :</p>
+
+<ul>
+  <% @cars.each do |car| %>
+    <li><%= car.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add a new car', new_car_path %>
