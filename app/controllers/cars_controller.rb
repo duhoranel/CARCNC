@@ -10,8 +10,12 @@ class CarsController < ApplicationController
   end
   def create
     @car = Car.new(car_params)
-    @car.save!
-    redirect_to root_path(@car)
+    @car.user = current_user
+    if @car.save
+      redirect_to root_path(@car)
+    else
+      render :new
+    end
   end
 
   private

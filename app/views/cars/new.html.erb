@@ -3,8 +3,6 @@
 <%= form_for(@car) do |f| %>
   <%= f.label :model %>
   <%= f.text_field :model %>
-  <%= f.label :user %>
-  <%= f.text_field :user %>
   <%= f.label :capacity %>
   <%= f.number_field :capacity %>
   <%= f.label :price %>
@@ -12,5 +10,4 @@
   <%= f.submit %>
 <% end %>
 
-<%= link_to 'Back', root_path %>
-<%= link_to 'Book this car', " " %> |
+<p><%= link_to 'Back to the main page', root_path %></p>
