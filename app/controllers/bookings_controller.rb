@@ -1,8 +1,4 @@
 class BookingsController < ApplicationController
-  def new
-    @bookings = Booking.new
-  end
-
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
@@ -24,7 +20,7 @@ class BookingsController < ApplicationController
 
   def index_owner
     @user = current_user
-    cars_owned = @user.cars
+    # cars_owned = @user.cars
     @bookings = Booking.joins(:cars).where(car: { user: current_user })
     # @bookings = cars_owned.map { |car| car.bookings }.flatten
   end
