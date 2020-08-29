@@ -1,9 +1,14 @@
-<h2>Details of the car</h2>
+<div class="container">
 
-<h2><%= @car.model %></h2>
-<p><%= @car.user %></p>
-<p><%= @car.capacity %></p>>
-<p><%= @car.price %></p>
+  <h1>Selected car</h1>
+  <p><%= link_to 'Back to the main page', root_path %></p>
 
-<p><%= link_to 'Book this car', " " %></p>
-<p><%= link_to 'Back to the main page', root_path %></p>
+
+  <p>Car's model : <%= @car.model %></p>
+  <p>User name : <%= @car.user %></p>
+  <p>Capacity : <%= @car.capacity %></p>
+  <p>Price : <%= @car.price %>$</p>
+
+  <p><%= link_to 'Book this car', " " %></p>
+
+</div>

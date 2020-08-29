@@ -1,13 +1,19 @@
-<h1>Please enter new car's details</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-2">
+      <h1>Please enter new car's details</h1>
 
-<%= form_for(@car) do |f| %>
-  <%= f.label :model %>
-  <%= f.text_field :model %>
-  <%= f.label :capacity %>
-  <%= f.number_field :capacity %>
-  <%= f.label :price %>
-  <%= f.number_field :price %>
-  <%= f.submit %>
-<% end %>
+      <%= form_for(@car) do |f| %>
+        <%= f.label :model %>
+        <%= f.text_field :model %>
+        <%= f.label :capacity %>
+        <%= f.number_field :capacity %>
+        <%= f.label :price %>
+        <%= f.number_field :price %>
+        <div class="submission-button"><%= f.submit %></div>
+      <% end %>
 
-<p><%= link_to 'Back to the main page', root_path %></p>
+      <p><%= link_to 'Back to the main page', root_path %></p>
+    </div>
+  </div>
+</div>
