@@ -1,10 +1,12 @@
-<h1>Car's list </h1>
-<p>Here's the list of the available cars :</p>
+<h1>Cars available in car.location </h1>
+<p></p>
 
-<ul>
-  <% @cars.each do |car| %>
-    <%= link_to car.model, car_path(car) %>
-  <% end %>
-</ul>
+<div class="cards">
+    <% @cars.each do |car|  %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/djcwoukgv/image/upload/v1597792127/samples/food/dessert.jpg')">
+          <%= link_to car.model, car_path(car) %>
+        </div>
+    <% end %>
+</div>
 
 <%= link_to 'Add a new car', new_car_path %>
