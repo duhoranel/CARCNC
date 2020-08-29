@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-3">
+    <div class="col-md-2">
       <h1>Please enter new car's details</h1>
 
       <%= form_for(@car) do |f| %>
@@ -10,7 +10,7 @@
         <%= f.number_field :capacity %>
         <%= f.label :price %>
         <%= f.number_field :price %>
-        <%= f.submit %>
+        <div class="submission-button"><%= f.submit %></div>
       <% end %>
 
       <p><%= link_to 'Back to the main page', root_path %></p>
