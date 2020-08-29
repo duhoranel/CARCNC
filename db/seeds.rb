@@ -5,4 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-new_car = Car.create!(model: 'test', price: '15', capacity: '6')
+
+Car.create!(model: "Jeep", price: "200$", capacity: "6")
+Car.create!(model: "Kia", price: "200$", capacity: "8")
+Car.create!(model: "Dodge", price: "200$", capacity: "5")
+Car.create!(model: "Acura", price: "200$", capacity: "5")
+Car.create!(model: "Mercedes Benz", price: "200$", capacity: "3")
+Car.create!(model: "BMW", price: "200$", capacity: "4")
+
+

@@ -8,7 +8,11 @@
   <p>User name : <%= @car.user %></p>
   <p>Capacity : <%= @car.capacity %></p>
   <p>Price : <%= @car.price %>$</p>
+    <% if @car.photo.attached? %>
+    <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
 
-  <p><%= link_to 'Book this car', " " %></p>
+
+  <p><%= link_to 'Book this car', new_car_booking_path(:car_id) %></p>
 
 </div>
