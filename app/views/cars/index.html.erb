@@ -1,17 +1,17 @@
-<h1>Cars available in location </h1>
-
 <div class="container">
+  <h1>Cars available in location </h1>
   <div class="row">
-    <% @cars.each do |car|  %>
-      <div class="card col-12 col-md-6 col-lg-3">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to car.model, car_path(car) %></h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    <% end %>
+        <% @cars.each do |car|  %>
+          <div class="card col-12 col-md-6 col-lg-3">
+            <%# <img class="card-img-top" src="" alt="Card image cap"> %>
+            <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill %>
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to car.model, car_path(car) %></h5>
+            </div>
+          </div>
+        <% end %>
   </div>
+  <p><%= link_to 'Add a new car', new_car_path %></p>
+  <%= link_to 'Sign-in', new_user_session_path %>
+
 </div>
-<%= link_to 'Add a new car', new_car_path %>
