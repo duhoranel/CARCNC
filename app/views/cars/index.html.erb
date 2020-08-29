@@ -1,12 +1,17 @@
-<h1>Cars available in car.location </h1>
-<p></p>
+<div class="container">
+  <h1>Cars available in location </h1>
+  <div class="row">
+        <% @cars.each do |car|  %>
+          <div class="card col-12 col-md-6 col-lg-3">
+            <%# <img class="card-img-top" src="" alt="Card image cap"> %>
+            <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill %>
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to car.model, car_path(car) %></h5>
+            </div>
+          </div>
+        <% end %>
+  </div>
+  <p><%= link_to 'Add a new car', new_car_path %></p>
+  <%= link_to 'Sign-in', new_user_session_path %>
 
-<div class="cards">
-    <% @cars.each do |car|  %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/djcwoukgv/image/upload/v1597792127/samples/food/dessert.jpg')">
-          <%= link_to car.model, car_path(car) %>
-        </div>
-    <% end %>
 </div>
-
-<%= link_to 'Add a new car', new_car_path %>
