@@ -13,6 +13,34 @@
 
   <body>
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="home-button" href="#">
+  <%= image_tag("logo.png", class: "rounded-circle") %>
+  <img src="" class="rounded-circle" width="30" height="30" alt="" loading="lazy">
+  CARCNC</a>
+
+<div class="avatar_container" class="form-inline">
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item" type="button">My profile</button>
+    <button class="dropdown-item" type="button">Messages</button>
+    <button class="dropdown-item" type="button">Notifications</button>
+    <button class="dropdown-item" type="button">Saved cars</button>
+    <button class="dropdown-item" type="button">Add a new offer</button>
+    <button class="dropdown-item" type="button">Share my experience</button>
+    <button class="dropdown-item" type="button">Help</button>
+    <button class="dropdown-item" type="button">Log out</button>
+  </div>
+</div>
+
+<img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+</div>
+
+</nav>
+
      <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>

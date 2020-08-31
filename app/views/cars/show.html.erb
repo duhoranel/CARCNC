@@ -1,18 +1,16 @@
 <div class="container">
-
-  <h1>Selected car</h1>
-  <p><%= link_to 'Back to the main page', root_path %></p>
-
-
-  <p>Car's model : <%= @car.model %></p>
-  <p>User name : <%= @car.user %></p>
-  <p>Capacity : <%= @car.capacity %></p>
-  <p>Price : <%= @car.price %>$</p>
+  <div class="img">
     <% if @car.photo.attached? %>
-    <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
     <% end %>
-
-
-  <p><%= link_to 'Book this car', new_car_booking_path(:car_id) %></p>
+  </div>
+  <div class="description">
+    <h2><%= @car.model %></h2>
+    <p>User name : <%= @car.user %></p>
+    <p>Capacity : <%= @car.capacity %> persons</p>
+    <p>Price : <%= @car.price %>$ /per day</p>
+  </div>
+  <a href="http://localhost:3000/cars/car_id/bookings/new" class="btn btn-danger">Reserve</a>
+  <p><%= link_to 'Back to the selection', cars_path %></p>
 
 </div>
