@@ -1,22 +1,25 @@
 <div class="container">
-  <div class="row justify-content-center">
-      <h1>Please enter new car's details</h1>
-
-    <div class="col-md-2">
-
+  <div class="row">
+    
+    <div class="form">
+      <h2>Please enter new car's details</h2>
       <%= form_for(@car) do |f| %>
-        <%= f.label :model %>
-        <%= f.text_field :model %>
-        <%= f.label :capacity %>
-        <%= f.number_field :capacity %>
-        <%= f.label :price %>
-        <%= f.number_field :price %>
-        <%= f.label :photo %>
-        <%= f.file_field :photo %>
-        <%= f.submit %></div>
-      <% end %>
+        <p><%= f.text_field :model %>
+        <%= f.label :model %></p>
 
-      <p><%= link_to 'Back to the main page', root_path %></p>
+        <p><%= f.number_field :capacity %>
+        <%= f.label :capacity %></p>
+
+        <p><%= f.number_field :price %>
+        <%= f.label :price %> per day</p>
+
+        <%= f.file_field :photo %>
+        <%= f.label :photo %>
+
+        <p><%= f.submit %></div></p>
+      <% end %>
     </div>
+    <p><%= link_to 'Back to the selection', cars_path %></p>
+    <p><%= link_to 'Back to the main page', root_path %></p>
   </div>
 </div>

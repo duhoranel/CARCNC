@@ -1,18 +1,32 @@
 <div class="container">
+  <div class="col-md-6">
+    <div class="bg-white border p-3 sticky-top">
 
-  <h1>Selected car</h1>
-  <p><%= link_to 'Back to the main page', root_path %></p>
+      <div class="img">
+        <% if @car.photo.attached? %>
+          <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
+      </div>
+      <div class="description">
+      <p> </p>
+        <h2><strong><%= @car.model %></strong></h2>
 
+      <div class="d-flex justify-content-between mt-3">
+        <p><strong>User name : </strong></p>
+        <p><%= @car.user %></p>
+      </div>
 
-  <p>Car's model : <%= @car.model %></p>
-  <p>User name : <%= @car.user %></p>
-  <p>Capacity : <%= @car.capacity %></p>
-  <p>Price : <%= @car.price %>$</p>
-    <% if @car.photo.attached? %>
-    <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
+      <div class="d-flex justify-content-between mt-3">
+        <p><strong>Capacity :</strong></p>
+        <p><%= @car.capacity %> persons</p>
+      </div>
 
-
-  <p><%= link_to 'Book this car', new_car_booking_path(:car_id) %></p>
-
+      <div class="d-flex justify-content-between mt-3 border-bottom">
+        <p><strong>Price : </strong></p>
+        <p><%= @car.price %>$ /per day</p>
+      </div>
+    </div>
+    <a href="http://localhost:3000/cars/car_id/bookings/new" class="btn btn-danger">Reserve</a>
+  </div>
+<p><%= link_to 'Back to the selection', cars_path %></p>
 </div>
