@@ -30,6 +30,18 @@ class BookingsController < ApplicationController
     @bookings = current_user.bookings
   end
 
+  def mark_as_accepted
+    @booking.status = "accepted"
+    @booking.save
+    redirect_to root_path
+  end
+
+  def mark_as_rejected
+    @booking.status = "rejected"
+    @booking.save
+    redirect_to root_path
+  end
+
   private
 
   def booking_params
