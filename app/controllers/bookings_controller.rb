@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.car_id = params[:car_id]
     if @booking.save!
-      redirect_to cars_path
+      redirect_to confirmation_path(@booking)
     else
       render :new
     end
@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
 
   def update
     if @booking.update(booking_params)
-      redirect_to cars_path
+      redirect_to confirmation_path
     else
       render :new
     end
@@ -28,6 +28,10 @@ class BookingsController < ApplicationController
   def index_renter
     @user = current_user
     @bookings = current_user.bookings
+  end
+
+  def confirmation
+    @booking = Booking.find(params[:booking_id])
   end
 
   private
