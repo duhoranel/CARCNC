@@ -7,8 +7,10 @@ Rails.application.routes.draw do
 
   patch '/bookings/:id', to:'bookings#update'
   get "/confirmation", to: "bookings#confirmation"
-  get '/bookings/owner', to: 'bookings#index_owner'
-  get '/bookings/renter', to: 'bookings#index_renter'
+  get '/bookings/dashboard', to: 'bookings#dashboard'
+  patch "/accept", to: "bookings#accept", as: "accept"
+  patch "/reject", to: "bookings#reject", as: "reject"
+
   get '/navbar', to: 'pages#navbar'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

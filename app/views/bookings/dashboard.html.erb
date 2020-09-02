@@ -9,6 +9,38 @@
       </div>
 </div>
 
+
+<div class="container">
+  <h2><%= current_user %>, all your booking's requests:</h2>
+
+    <% @bookings.cars.each do |booking| %>
+      <% if booking.status == nil %>
+      <div class="card-trip card-booking">
+        <h2><%= car.model.capitalize %></h2>
+        <p><%= booking.user%> </p>
+        <br>
+        <div class="card-booking-content">
+        <%= booking.car_id %>
+        <br>
+          <%= link_to "Accept", booking_accept_path(booking), class: "btn btn-primary", method: :patch %>
+          <%= link_to "Reject", booking_reject_path(booking), class: "btn btn-secondary", method: :patch %>
+      <% else %>
+      <div class="card-trip card-booking accepted">
+        <h2><%= booking.car.model.capitalize %></h2>
+        <p><%= booking.user %> </p>
+        <br>
+        <div class="card-booking-content">
+        <%= booking.car_id %>
+        <br>
+          <p class="accepted">Accepted</p>
+      <% end %>
+      </div>
+      </div>
+    <% end %>
+</div>
+</div>
+
+
 <div class="container">
 <div class="notification">
   <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar-large" />
@@ -37,16 +69,11 @@
 </div>
 </div>
 
-<div class="container py-3">
-        <div class="col-md-8">
-              <h2>Previous bookings</h2>
-              <!-- card -->
-              <div class="card-product">
-              <img src="https://res.cloudinary.com/djcwoukgv/image/upload/v1597792134/samples/ecommerce/car-interior-design.jpg" />
-              <h5 class="card-product-details">Mercedes Benz, Verona Italy</h5>
-            </div>
-        </div>
-  </div>
+
+
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
