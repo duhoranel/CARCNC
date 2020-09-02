@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.car_id = params[:car_id]
     if @booking.save!
-      redirect_to cars_path
+      redirect_to car_path(car_id)
     else
       render :new
     end
