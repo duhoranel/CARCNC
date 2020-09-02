@@ -19,6 +19,7 @@ class BookingsController < ApplicationController
   end
 
   def dashboard
+    @bookings = Booking.all
     @other_people_requests = Booking.joins(:cars).where(car: { user: current_user })
     @my_pending_requests = current_user.bookings
 
@@ -39,10 +40,6 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:booking_id])
     @booking.update(status: false)
     redirect_to bookings_path
-  end
-
-  def index
-    @bookings = Booking.all
   end
 
   private
