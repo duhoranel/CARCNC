@@ -3,11 +3,24 @@
         <div class="row">
           <div class="col-md-8">
             <h3>Your inquiries</h3>
-            <p>You can ask questions to car owners renters via the platform</p>
+            <p>You can chat with CARCNCers via the platform</p>
           </div>
         </div>
       </div>
 </div>
+
+
+<div class="container">
+
+    <% @bookings.each do |booking| %>
+
+
+          <%= link_to "Accept", accept_path(@booking), class: "btn btn-primary", method: :patch %>
+          <%= link_to "Reject", reject_path(@booking), class: "btn btn-secondary", method: :patch %>
+      <% end %>
+</div>
+
+
 
 <div class="container">
 <div class="notification">
@@ -37,16 +50,11 @@
 </div>
 </div>
 
-<div class="container py-3">
-        <div class="col-md-8">
-              <h2>Previous bookings</h2>
-              <!-- card -->
-              <div class="card-product">
-              <img src="https://res.cloudinary.com/djcwoukgv/image/upload/v1597792134/samples/ecommerce/car-interior-design.jpg" />
-              <h5 class="card-product-details">Mercedes Benz, Verona Italy</h5>
-            </div>
-        </div>
-  </div>
+
+
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
