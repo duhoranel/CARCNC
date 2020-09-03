@@ -4,4 +4,7 @@ class PagesController < ApplicationController
    
    def navbar
    end
+
+   def calendar
+   end
 end
