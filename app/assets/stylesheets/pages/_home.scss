@@ -2,6 +2,7 @@
   html, body {
     width: 100%;
     height: 100%;
+  
   }
 
   nav { background-image: url("Car.jpg");
@@ -13,27 +14,297 @@
   width: 100%;
   height: 100%;
   background-size: cover;
+  
 
   }
-  .search-form-control {
-    position: relative;
-  }
-  
+ 
   .search-form-control .btn {
-    position: absolute;
-    top: 8px;
-    bottom: 8px;
+    
+    
+    height: 32px;
     right: 8px;
+    margin-bottom: 0rem;
   }
   
-  .search-form-control .form-control {
-    height: 3.5rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    border: 1px solid #E7E7E7;
+ 
+
+  #location {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    height: 65px;
+    width: 200px;
+    font-family: Abyssinica SIL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+  }
+
+  #first_date {
+    height: 65px;
+    width: 200px;
+    font-family: Abyssinica SIL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    
+    color: #000000;
+  }
+
+  #second_date {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 65px;
+    width: 200px;
+    font-family: Abyssinica SIL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    
+    color: #000000;
   }
   
-  .search-form-control .form-control:focus {
-    border: 1px solid #1EDD88;
-    outline: none !important;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+
+  .buttons {
+    position: sticky;
+    width: 600px;
+    height: 65px;
+    left: 400px;
+    top: 180px;
+    
+    background: #FFFFFF;
+    border-radius: 50px;
+   
+}
+  .button {
+    
+    width: 52px;
+    height: 52px;
+    left: 793px;
+    top: 117px;
+    
+    background: #34BECD;
   }
+
+
+  /*Font Color*/
+$button-buy-font-color:#2c2b2b;
+$button-try-font-color:#2c2b2b;
+
+/*Font Color - Hover*/
+$button-buy-font-color-hover:#2c2b2b;
+$button-try-font-color-hover:#2c2b2b;
+
+html, body, div, span {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+
+a {
+    color: #2c2b2b;
+    text-decoration: none;
+    transition: color 0.3s ease-out 0s;
+}
+a:hover {
+    color: #ffffff;
+}
+
+/*
+section.section_button {
+    overflow: auto;
+    padding: 0 !important;
+}
+.buttons.button_center {
+    float: none;
+    margin: 0 auto;
+}
+.buttons.button_external {
+    display: block;
+    margin: 15px auto;
+}
+.section_button .buttons.button_right {
+    float: right;
+}
+.section_button .buttons.button_left {
+    float: left;
+}
+*/
+
+.buttons span {
+    background: #34becd;
+    border-radius: 100em;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.3) inset;
+    
+    display: block;
+    float: left;
+    font-family: "Merriweather",serif;
+    font-style: italic;
+    font-weight: 700;
+    height: 52px;
+    margin: 10px 0 0 -16px;
+    padding: 8px 0 0;
+    position: relative;
+    text-align: center;
+    width: 52px;
+    z-index: 99;
+    left: 700px;
+    top: 117px;
+}
+
+a.button_buy {
+    background: rgba(0, 0, 0, 0) ;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset;
+    color: $button-buy-font-color;
+    display: block;
+    float: left;
+    font-size: 135%;
+    font-weight: bold;
+    height: 51px;
+    padding: 15px 0 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+    width: 177px;
+    z-index: 20;
+}
+a.button_buy:hover {
+    background: rgba(0, 0, 0, 0) ;
+    color: $button-buy-font-color-hover;
+}
+a.button_try {
+    background: rgba(0, 0, 0, 0) ;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset;
+    color:   $button-try-font-color;
+    display: block;
+    float: left;
+    font-size: 135%;
+    font-weight: bold;
+    height: 51px;
+    margin-left: -16px;
+    padding: 15px 0 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    
+    width: 177px;
+    z-index: 20;
+}
+a.button_try:hover {
+    background: rgba(0, 0, 0, 0) ;
+    
+    color: $button-try-font-color-hover;
+}
+
+a.button_buy:activea.button_try:active:active, input.submit:active {
+    box-shadow: 0 -2px 0 rgba(255, 255, 255, 0.4) inset;
+    outline: medium none;
+}
+
+
+
+.fa, .fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    background: #34becd;
+    border-radius: 100em;
+   
+    height: 32px;
+    margin: 10px 0 0 -16px;
+    padding: 8px 0 0;
+    position: relative;
+    text-align: center;
+    width: 32px;
+    
+    
+   
+}
+
+
+
+.avatar_container {
+position: fixed;
+width: 135px;
+height: 62px;
+left: 1300px;
+top: 21px;
+
+background: #FFFFFF;
+border-radius: 50px;
+}
+
+
+
+.dropdown {
+position: fixed;
+width: 37px;
+height: 43px;
+top: 30px;
+
+}
+
+.rounded-circle {
+position: fixed;
+width: 140px;
+height: 140px;
+left: 0px;
+top: 3px;
+
+}
+
+
+.home-button {
+position: fixed;
+width: 155px;
+height: 38px;
+left: 124px;
+top: 50px;
+
+font-family: Aclonica;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 34px;
+
+color: #000000;
+
+
+}
+
+.box div {
+    display: inline-block;
+}
+
+    /* flex-flow: row wrap;  .form-inline
+        /* height: 150px; .card 
+
+
+*/
+
+
+.calendar-card {
+    border: 1px solid rgba(0,0,0,.125);
+    width: 400px;
+    border-radius: 10px;
+}
+
+.avatar{
+width: 40px;
+height: 40px;
+left: 1380px;
+top: 30px;
+position: fixed;
+}

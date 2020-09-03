@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   patch "/reject", to: "bookings#reject", as: "reject"
 
   get '/navbar', to: 'pages#navbar'
+  get '/calendar', to: 'pages#calendar'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 # coucou
