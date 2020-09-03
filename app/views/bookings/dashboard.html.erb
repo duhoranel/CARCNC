@@ -10,30 +10,31 @@
 </div>
 
 
-<div class="container">
-
-    <% @bookings.each do |booking| %>
-
+ <div >
+      <% @bookings.each do |booking| %>
 
           <%= link_to "Accept", accept_path(@booking), class: "btn btn-primary", method: :patch %>
           <%= link_to "Reject", reject_path(@booking), class: "btn btn-secondary", method: :patch %>
       <% end %>
-</div>
 
-
+    </div>
 
 <div class="container">
-<div class="notification">
-  <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar-large" />
-  <div class="notification-content">
-    <p><small>Sep 1st</small></p>
-    <p class="text-success">Hi Choe! Your request has just been approved.</p>
+  <div class="notification">
+    <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar-large" />
+    <div class="notification-content">
+      <p><small>Sep 1st</small></p>
+      <p class="text-success">Hi Choe! Your request has just been approved.</p>
+    </div>
+    <div class="notification-actions">
+      <% @bookings.each do |booking| %>
+
+          <%= link_to "Accept", accept_path(@booking), class: "btn btn-primary", method: :patch %>
+          <%= link_to "Reject", reject_path(@booking), class: "btn btn-secondary", method: :patch %>
+      <% end %>
+
+    </div>
   </div>
-  <div class="notification-actions">
-    <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
-    <a href="#">Delete <i class="far fa-trash-alt"></i></a>
-  </div>
-</div>
 </div>
 
 <div class="container">
