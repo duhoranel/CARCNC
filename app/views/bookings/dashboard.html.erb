@@ -1,0 +1,61 @@
+<div class="bg-blue">
+      <div class="container p-3">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Your inquiries</h3>
+            <p>You can chat with CARCNCers via the platform</p>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div class="container">
+
+    <% @bookings.each do |booking| %>
+
+
+          <%= link_to "Accept", accept_path(@booking), class: "btn btn-primary", method: :patch %>
+          <%= link_to "Reject", reject_path(@booking), class: "btn btn-secondary", method: :patch %>
+      <% end %>
+</div>
+
+
+
+<div class="container">
+<div class="notification">
+  <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar-large" />
+  <div class="notification-content">
+    <p><small>Sep 1st</small></p>
+    <p class="text-success">Hi Choe! Your request has just been approved.</p>
+  </div>
+  <div class="notification-actions">
+    <a href="#">Edit <i class="fas fa-pencil-alt"></i></a>
+    <a href="#">Delete <i class="far fa-trash-alt"></i></a>
+  </div>
+</div>
+</div>
+
+<div class="container">
+<div class="notification">
+  <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar-large" />
+  <div class="notification-content">
+    <p><small>Sep 1st</small></p>
+    <p>Hi Choe! Your request is being reviewed by the owner.</p>
+  </div>
+  <div class="notification-actions">
+    <a href="#">Message Owner <i class="fas fa-pencil-alt"></i></a>
+    <a href="#">Delete <i class="far fa-trash-alt"></i></a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>

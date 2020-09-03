@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.car_id = params[:car_id]
     if @booking.save!
-      redirect_to car_path(car_id)
+      redirect_to confirmation_path(@booking)
     else
       render :new
     end
@@ -12,22 +12,34 @@ class BookingsController < ApplicationController
 
   def update
     if @booking.update(booking_params)
-      redirect_to cars_path
+      redirect_to confirmation_path
     else
       render :new
     end
   end
 
-  def index_owner
-    @user = current_user
-    # cars_owned = @user.cars
-    @bookings = Booking.joins(:cars).where(car: { user: current_user })
+  def dashboard
+    @bookings = Booking.all
+    @other_people_requests = Booking.joins(:cars).where(car: { user: current_user })
+    @my_pending_requests = current_user.bookings
+
     # @bookings = cars_owned.map { |car| car.bookings }.flatten
   end
 
-  def index_renter
-    @user = current_user
-    @bookings = current_user.bookings
+  def confirmation
+    @booking = Booking.find(params[:booking_id])
+  end
+
+  def accept
+    @booking = Booking.find(params[:booking_id])
+    @booking.update(status: true)
+    redirect_to bookings_path
+  end
+
+  def reject
+    @booking = Booking.find(params[:booking_id])
+    @booking.update(status: false)
+    redirect_to bookings_path
   end
 
   private
