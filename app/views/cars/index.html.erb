@@ -1,6 +1,6 @@
 <div class="container">
   <h2>Available cars</h2>
-  <a href="http://localhost:3000/cars/new" class="btn btn-outline-warning">Add a new car ?</a>
+  <a href="/cars/new" class="btn btn-outline-warning">Add a new car ?</a>
   <p> </p>
     <div class="row justify-content-center">
       <% @cars.each do |car|  %>
@@ -8,14 +8,16 @@
           <div class="card" style="width: 18rem;">
             <%= cl_image_tag car.photo.key, height: 180, width: 286, crop: :fill %>
             <div class="card-body">
-              <h5 class="card-title"><%= link_to car.model, car_path(car) %></h5>
-              <a href="http://localhost:3000/cars/car_id/bookings/new" class="btn btn-primary">Book now</a>
+              <h4 class="card-title"><strong><%= car.model %></strong></h4>
+                <p><%= car.capacity %> persons</p>
+                <p><%= car.price %>$ /per day</p>
+              <%= link_to "Book now", car_path(car) %>
             </div>
           </div>
         </div>
       <% end %>
     </div>
   <p> </p> 
-  <a href="http://localhost:3000/users/sign_in" class="btn btn-info">Sign-in</a>
+  <a href="/users/sign_in" class="btn btn-info">Sign-in</a>
   <p> </p> 
 </div>
