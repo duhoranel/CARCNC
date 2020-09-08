@@ -2,7 +2,7 @@
   <h1>Your booking is pending...</h1>
   <div class="message">
 
-    <h2>Hi <%= @booking.user, %></h2>
+    <h2>Hi <%= @booking.user.first_name %></h2>
     <p>Your booking for <strong><%= @booking.car.model %></strong> was sent to the owner. You will receive a confirmation by email when your request is accepted.</p>
     <p>See you soon</p>
     <%= link_to "Book another car", cars_path %>
