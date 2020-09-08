@@ -6,15 +6,14 @@ Rails.application.routes.draw do
       get "/confirmation", to: "bookings#confirmation"
     end
   end
-
-  patch '/bookings/:id', to:'bookings#update'
+  resources :bookings, only: [:update, :edit, :destroy]
 
   get '/bookings/dashboard', to: 'bookings#dashboard'
-  patch "/accept", to: "bookings#accept", as: "accept"
-  patch "/reject", to: "bookings#reject", as: "reject"
+  patch "bookings/:id/accept", to: "bookings#accept", as: "accept"
+  patch "bookings/:id/reject", to: "bookings#reject", as: "reject"
 
   get '/navbar', to: 'pages#navbar'
   get '/calendar', to: 'pages#calendar'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
-# coucou
+

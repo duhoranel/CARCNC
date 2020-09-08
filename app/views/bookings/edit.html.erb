@@ -1,8 +1,6 @@
-<%= simple_form_for [@car, @booking] do |f| %>
+<%= simple_form_for @booking do |f| %>
   <%= f.input :start_date, as: :date, start_year: Date.today.year, order: [:day, :month, :year], html5: true, input_html: { min: Date.today.to_s, value: Date.today.to_s } %>
   <%= f.input :end_date, as: :date, start_year: Date.today.year, order: [:day, :month, :year], html5: true, input_html: { min: Date.today.to_s, value: Date.today.to_s } %>
   <%= f.hidden_field :car_id, value: @car.id %>
   <%= f.submit %>
 <% end %>
-
-

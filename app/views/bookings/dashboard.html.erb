@@ -10,18 +10,29 @@
 </div>
 
 
-code user identification
+<!-- code user identification -->
 
 
 <div class="container">
 
-    <% @bookings.each do |booking| %>
-
-
-          <%= link_to "Accept", accept_path(@booking), class: "btn btn-primary", method: :patch %>
-          <%= link_to "Reject", reject_path(@booking), class: "btn btn-secondary", method: :patch %>
-      <% end %>
+    <% @other_people_requests.each do |booking| %>
+          <%= link_to "Accept", accept_path(booking), class: "btn btn-primary", method: :patch %>
+          <%= link_to "Reject", reject_path(booking), class: "btn btn-secondary", method: :patch %>
+    <% end %>
 </div>
+
+
+
+
+<div class="container">
+
+    <% @my_pending_requests.each do |booking| %>
+      <%= link_to "Edit", edit_booking_path(booking), class: "btn btn-primary" %>
+      <%= link_to "Delete", booking_path(booking), class: "btn btn-secondary", method: :delete %>
+    <% end %>
+</div>
+
+
 
 
 
