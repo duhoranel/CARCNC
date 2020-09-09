@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "logo.png" %>CarCNC
+  <%= link_to root_path(@car), class: "navbar-brand" do %>
+    <%= image_tag "logo.png" %><strong>CarCNC</strong>
   <% end %>
 
   <div class="btn-group">
@@ -9,9 +9,9 @@
       <span class="sr-only">Toggle Dropdown</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Dashboard</a>
+      <a class="dropdown-item" href="<%= bookings_dashboard_path %>">Dashboard</a>
       <a class="dropdown-item" href="#">Saved cars</a>
-      <a class="dropdown-item" href="#">Add a new offer</a>
+      <a class="dropdown-item" href="<%= new_car_path %>">Add a new offer</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="#">Log out</a>
     </div>
