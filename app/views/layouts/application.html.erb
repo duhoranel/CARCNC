@@ -4,61 +4,29 @@
     <title>CARCNC</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-
   </head>
 
   <body>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="home-button" href="#">
-  <%= image_tag("logo.png", class: "rounded-circle") %>
-  <img src="" class="rounded-circle" width="30" height="30" alt="" loading="lazy">
-  CARCNC</a>
-
-<div class="avatar_container" class="form-inline">
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item" type="button">My profile</button>
-    <button class="dropdown-item" type="button">Messages</button>
-    <button class="dropdown-item" type="button">Notifications</button>
-    <a class="dropdown-item" href="/bookings/renter">Saved cars</button>
-    <a class="dropdown-item" href="/cars/new">Add a new offer</a>
-    <button class="dropdown-item" type="button">Share my experience</button>
-    <button class="dropdown-item" type="button">Help</button>
-    <a class="dropdown-item" href="/users/sign_out">Log out</button>
-  </div>
-</div>
-
-<img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
-</div>
-
-</nav>
-
-     <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+    <%= render "pages/navbar" %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
+    <div class="container">
+      <div class="footer">
+        <div class="footer-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-copyright">
+          This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+        </div>
+      </div>
+    </div>
   </body>
-
-<div class="container">
-  <div class="footer">
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="footer-copyright">
-      This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-    </div>
-  </div>
-</div>
 </html>
