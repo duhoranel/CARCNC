@@ -4,8 +4,23 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    booking_params
+    @booking = Booking.new
+    @car = Car.find(params[:car_id])
+    @booking.car = @car
     @booking.user = current_user
+<<<<<<< HEAD
+      if @booking.save!
+        redirect_to car_booking_confirmation_path(@booking)
+      else
+        render "cars/show"
+      end
+  end
+
+  def update
+    if @booking.update
+      redirect_to car_booking_confirmation_path(@booking)
+=======
     if @booking.save!
       redirect_to car_booking_confirmation_path(@booking.car, @booking)
     else
@@ -17,6 +32,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     if @booking.update(booking_params)
       redirect_to car_booking_confirmation_path(@booking.car, @booking)
+>>>>>>> master
     else
       render :new
     end
@@ -40,12 +56,19 @@ class BookingsController < ApplicationController
   def accept
     @booking = Booking.find(params[:id])
     @booking.update(status: true)
+<<<<<<< HEAD
+    redirect_to root_path
+=======
     redirect_to bookings_dashboard_path
+>>>>>>> master
   end
 
   def reject
     @booking = Booking.find(params[:id])
     @booking.update(status: false)
+<<<<<<< HEAD
+    redirect_to root_path
+=======
     redirect_to bookings_dashboard_path
   end
 
@@ -53,11 +76,16 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to bookings_dashboard_path
+>>>>>>> master
   end
 
   private
 
   def booking_params
+<<<<<<< HEAD
+    params.permit(:car_id)
+=======
     params.require(:booking).permit(:start_date, :end_date, :car_id)
+>>>>>>> master
   end
 end
