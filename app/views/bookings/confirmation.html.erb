@@ -1,11 +1,35 @@
 <div class="container">
   <h1>Your booking is pending...</h1>
-  <div class="message">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="notification">
+        <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar-large" />
+        <div class="notification-content">
+          <p><small>Sep 1st</small></p>
+          <p class="text-success">Your booking for <strong><%= @booking.car.model %></strong> was sent to the owner. You will receive a confirmation by email when your request is accepted.</p>
+        </div>
 
-    <h2>Hi <%= @booking.user.first_name %></h2>
-    <p>Your booking for <strong><%= @booking.car.model %></strong> was sent to the owner. You will receive a confirmation by email when your request is accepted.</p>
-    <p>See you soon</p>
-    <%= link_to "Book another car", cars_path %>
+      </div>
+       </div>
+  </div>
 
+
+<div class="py-3"> <h2>Other cars in rentals</h2>
+  <div class="row">
+      <% @cars.each do |car|  %>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <%= cl_image_tag car.photo.key, height: 180, width: 286, crop: :fill %>
+            <div class="card-body">
+              <h4 class="card-title"><strong><%= car.model %></strong></h4>
+                <p><%= car.capacity %> persons</p>
+                <p><%= car.price %>$ /per day</p>
+              <%= link_to "Book now", car_path(car), class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
   </div>
 </div>
+</div>
+
