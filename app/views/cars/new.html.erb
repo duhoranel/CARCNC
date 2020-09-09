@@ -1,9 +1,9 @@
 <div class="container">
-  <div class="row">
-
+  <div class="row justify-content" >
     <div class="form">
-      <h2>Please enter new car's details</h2>
+      <h3>Please enter new car's details</h3>
       <%= form_for(@car) do |f| %>
+        
         <p><%= f.text_field :model %>
         <%= f.label :model %></p>
 
