@@ -5,14 +5,13 @@
               <h3>Your inquiries</h3>
             </div>
           </div>
-
   </div>
 <div class="row"> <% @other_people_requests.each do |booking| %>
 
   <div class="notification">
       <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar-large" />
           <div class="notification-content">
-            <p><small>Sep 1st</small></p>
+            <p><small>Sep 10th</small></p>
             <p class="">Your <strong> car </strong> has been requested for a booking  was sent to the owner. You can accept or reject the request</p>
 
           <div class="notification-actions">
@@ -20,11 +19,11 @@
             <%= link_to "Reject", reject_path(booking), class: "btn btn-danger", method: :patch %>
           </div>
           </div>
-
   </div>
 <% end %>
 </div>
 
+<% end %>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
