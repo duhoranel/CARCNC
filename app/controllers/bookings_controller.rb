@@ -30,21 +30,23 @@ class BookingsController < ApplicationController
   end
   def confirmation
     @booking = Booking.find(params[:booking_id])
+    @cars = Car.all
+    @my_pending_requests = Booking.where(user: current_user)
   end
   def accept
     @booking = Booking.find(params[:id])
     @booking.update(status: true)
-    redirect_to bookings_dashboard_path
+    redirect_to root_path
   end
   def reject
     @booking = Booking.find(params[:id])
     @booking.update(status: false)
-    redirect_to bookings_dashboard_path
+    redirect_to root_path
   end
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to bookings_dashboard_path
+    redirect_to root_path
   end
   private
   def booking_params
