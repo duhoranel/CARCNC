@@ -7,6 +7,7 @@ class CarsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @car = Car.find(params[:id])
   end
 
@@ -27,6 +28,6 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.require(:car).permit(:model, :capacity, :price)
+    params.require(:car).permit(:model, :capacity, :price, :photo)
   end
 end

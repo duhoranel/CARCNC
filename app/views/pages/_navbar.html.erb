@@ -1,0 +1,20 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to root_path(@car), class: "navbar-brand" do %>
+    <%= image_tag "logo.png" %><strong>CarCNC</strong>
+  <% end %>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Dashboard", bookings_dashboard_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Add a new car", new_car_path, class: "nav-link" %>
+      </li>
+  </div>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  <%= link_to "Log out", "#", class: "btn btn-ghost" %>
+</div>
