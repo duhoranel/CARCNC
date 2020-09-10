@@ -1,5 +1,8 @@
 class CarsController < ApplicationController
   def index
+    @location = params[:location]
+    @start_date = params[:start_date][:date_input_name]
+    @end_date = params[:end_date][:date_input_name]
     @cars = Car.all
   end
 

@@ -1,26 +1,23 @@
 
   <div class="bg-img">
-  <a class="home-button" href="#">
-  <%= image_tag("logo.png", class: "rounded-circle") %>
- 
-  CARCNC</a>
-  
-  <div class="btn_container"
-  <%= form_tag '/activities', method: :get, class: 'my_class' do %>
-    <%= text_field_tag 'location_input_id', nil, placeholder: 'Location', class: 'location_btn ' %> 
-    <%= date_field "start_date_input_id", "date_input_name", class: 'first_date_btn' %>
-    <%= date_field "end_date_input_id", "date_input_name", class: 'last_date_btn' %>
-    <%= submit_tag 'submit', class: 'submit' %>
-    
-   
-  <% end %>
+    <a class="home-button" href="#">
+      <%= image_tag("logo.png", class: "rounded-circle") %> CARCNC
+    </a>
+
+    <div class="btn_container">
+    <%= form_tag '/cars', method: :get, class: 'my_class' do %>
+      <%= text_field_tag 'location', nil, placeholder: 'Location', class: 'location_btn ' %> 
+      <%= date_field "start_date", "date_input_name", class: 'first_date_btn' %>
+      <%= date_field "end_date", "date_input_name", class: 'last_date_btn' %>
+      <%= submit_tag 'submit', class: 'submit' %>
+    <% end %>
+    </div>
   
 
   <button name="button" type="submit" class="btn btn-flat">
-    
     <i class="fas fa-search">
     </i> 
-    </button>
+  </button>
     
 <!--<button name="jump" onclick="jump()">Go</button>-->
 
