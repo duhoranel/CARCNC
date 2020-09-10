@@ -9,21 +9,26 @@
         </div>
       </div>
 </div>
-<div class="notification">
+ <% @other_people_requests.each do |booking| %>
+<div class="notification col-md-8">
+  <div class="row">
         <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar-large" />
         <div class="notification-content">
           <p><small>Sep 1st</small></p>
-          <p class="text-success">Your <strong> car </strong> has been requested for a booking  was sent to the owner. You will receive a confirmation by email when your request is accepted.</p>
-
-        <% @other_people_requests.each do |booking| %>
-        <div class="notification-actions">
-          <%= link_to "Accept", accept_path(booking), class: "btn btn-primary", method: :patch %>
-          <%= link_to "Reject", reject_path(booking), class: "btn btn-secondary", method: :patch %>
+          <p class="">Your <strong> car </strong> has been requested for a booking  was sent to the owner.</p>
         </div>
-        <% end %>
-         </div>
+  </div>
+  <div class="row">
+        <div class="notification-actions">
+          <%= link_to "Accept", accept_path(booking), class: "btn btn-ghost", method: :patch %>
+          <%= link_to "Reject", reject_path(booking), class: "btn btn-ghost", method: :patch %>
+        </div>
+
+
+  </div>
 </div>
 
+<% end %>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>

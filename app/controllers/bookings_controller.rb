@@ -42,7 +42,7 @@ class BookingsController < ApplicationController
   def accept
     @booking = Booking.find(params[:id])
     @booking.update(status: true)
-    redirect_to bookings_dashboard_path
+    redirect_to root_path
   end
 
   def reject
