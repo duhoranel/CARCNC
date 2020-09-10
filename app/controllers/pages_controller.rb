@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
    def home
+    @booking = Booking.new
    end
    
    def navbar
@@ -7,5 +8,6 @@ class PagesController < ApplicationController
 
    def calendar
    end
+
 end
 
