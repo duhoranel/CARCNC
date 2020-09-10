@@ -1,29 +1,27 @@
 <div class="container">
-<div class="bg-blue">
-        <div class="row">
-          <div class="col-md-8">
-            <h3>Your inquiries</h3>
-            <p>You can chat with CARCNCers via the platform</p>
+  <div class="bg-blue">
+          <div class="row">
+            <div class="col-md-8">
+              <h3>Your inquiries</h3>
+            </div>
           </div>
-        </div>
 
-</div>
+  </div>
 <div class="row"> <% @other_people_requests.each do |booking| %>
 
-<div class="notification">
+  <div class="notification">
+      <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar-large" />
+          <div class="notification-content">
+            <p><small>Sep 1st</small></p>
+            <p class="">Your <strong> car </strong> has been requested for a booking  was sent to the owner. You can accept or reject the request</p>
 
-    <img src='https://kitt.lewagon.com/placeholder/users/cveneziani' class="avatar-large" />
-        <div class="notification-content">
-          <p><small>Sep 1st</small></p>
-          <p class="text-success">Your <strong> car </strong> has been requested for a booking  was sent to the owner. You will receive a confirmation by email when your request is accepted.</p>
+          <div class="notification-actions">
+            <%= link_to "Accept", accept_path(booking), class: "btn btn-success", method: :patch %>
+            <%= link_to "Reject", reject_path(booking), class: "btn btn-danger", method: :patch %>
+          </div>
+          </div>
 
-        <div class="notification-actions">
-          <%= link_to "Accept", accept_path(booking), class: "btn btn-primary", method: :patch %>
-          <%= link_to "Reject", reject_path(booking), class: "btn btn-secondary", method: :patch %>
-        </div>
-         </div>
-
-</div>
+  </div>
 <% end %>
 </div>
 
