@@ -2,7 +2,7 @@
   html, body {
     width: 100%;
     height: 100%;
-  
+
   }
 
   nav { background-image: url("Car.jpg");
@@ -14,19 +14,19 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  
+
 
   }
- 
+
   .search-form-control .btn {
-    
-    
+
+
     height: 32px;
     right: 8px;
     margin-bottom: 0rem;
   }
-  
- 
+
+
 
   #location {
     border-top-left-radius: 50px;
@@ -49,7 +49,7 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 30px;
-    
+
     color: #000000;
   }
 
@@ -63,10 +63,10 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 30px;
-    
+
     color: #000000;
   }
-  
+
 
   .buttons {
     position: sticky;
@@ -74,18 +74,18 @@
     height: 65px;
     left: 400px;
     top: 180px;
-    
+
     background: #FFFFFF;
     border-radius: 50px;
-   
+
 }
   .button {
-    
+
     width: 52px;
     height: 52px;
     left: 793px;
     top: 117px;
-    
+
     background: #34BECD;
   }
 
@@ -103,7 +103,7 @@ html, body, div, span {
     font: inherit;
     margin: 0;
     padding: 0;
-    
+
 }
 
 
@@ -143,7 +143,7 @@ section.section_button {
     background: #34becd;
     border-radius: 100em;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.3) inset;
-    
+
     display: block;
     float: left;
     font-family: "Merriweather",serif;
@@ -199,13 +199,13 @@ a.button_try {
     position: relative;
     text-align: center;
     text-decoration: none;
-    
+
     width: 177px;
     z-index: 20;
 }
 a.button_try:hover {
     background: rgba(0, 0, 0, 0) ;
-    
+
     color: $button-try-font-color-hover;
 }
 
@@ -221,16 +221,16 @@ a.button_buy:activea.button_try:active:active, input.submit:active {
     font-weight: 900;
     background: #34becd;
     border-radius: 100em;
-   
+
     height: 32px;
     margin: 10px 0 0 -16px;
     padding: 8px 0 0;
     position: relative;
     text-align: center;
     width: 32px;
-    
-    
-   
+
+
+
 }
 
 
@@ -289,7 +289,7 @@ color: #000000;
 }
 
     /* flex-flow: row wrap;  .form-inline
-        /* height: 150px; .card 
+        /* height: 150px; .card
 
 
 */
@@ -307,4 +307,81 @@ height: 40px;
 left: 1380px;
 top: 30px;
 position: fixed;
+}
+
+.btn_container {
+        position: sticky;
+        width: 600px;
+        height: 65px;
+        left: 400px;
+        top: 80px;
+        background: #FFFFFF;
+        border-radius: 50px;
+       border: 1px solid grey;
+       padding: 0px;
+    }
+    .submit {
+        width: 30px;
+        height: 20px;
+        background: #FFFFFF;
+        margin-top: 0px;
+        margin-left: 0px;
+        position: sticky;
+    }
+   .location_btn {
+    height: 60px;
+    width: 190px;
+    position: sticky;
+    padding-left: 30px;
+    margin: 0px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: 0px solid;
+    font-family: Abyssinica SIL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+   }
+   .first_date_btn{
+    height: 55px;
+    position: sticky;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin: 0px;
+    border-top:0px solid;
+    border-bottom:0px solid;
+    border-left:1px solid grey;
+    border-right:1px solid grey;
+    width: 180px;
+    font-family: Abyssinica SIL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: #757575;
+   }
+   .last_date_btn {
+    height: 55px;
+    position: sticky;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin: 0px;
+    border: 0px solid;
+    width: 180px;
+    font-family: Abyssinica SIL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: #757575;
+   }
+.fa, .fas {
+    font-family: ‘Font Awesome 5 Free’;
+    font-weight: 900;
+    background: #34BECD;
+    border-radius: 100em;
+    height: 30px;
+    margin: 10px 0 0 -16px;
+    padding: 8px 0 0;
+    position: sticky;
+    text-align: center;
+    width: 30px;
 }

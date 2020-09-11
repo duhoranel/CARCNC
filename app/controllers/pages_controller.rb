@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
-   def home
-   end
-   
-   def navbar
-   end
+  def home
+    @booking = Booking.new
+  end
 
-   def calendar
-   end
+  def navbar
+  end
+
+  def calendar
+  end
 end
-
