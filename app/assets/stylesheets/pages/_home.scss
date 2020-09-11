@@ -308,3 +308,80 @@ left: 1380px;
 top: 30px;
 position: fixed;
 }
+
+.btn_container {
+  position: sticky;
+  width: 600px;
+  height: 65px;
+  left: 400px;
+  top: 80px;
+  background: #FFFFFF;
+  border-radius: 50px;
+ border: 1px solid grey;
+ padding: 0px;
+}
+.submit {
+  width: 30px;
+  height: 20px;
+  background: #FFFFFF;
+  margin-top: 0px;
+  margin-left: 0px;
+  position: sticky;
+}
+.location_btn {
+height: 60px;
+width: 190px;
+position: sticky;
+padding-left: 30px;
+margin: 0px;
+border-top-left-radius: 50px;
+border-bottom-left-radius: 50px;
+border: 0px solid;
+font-family: Abyssinica SIL;
+font-style: normal;
+font-weight: normal;
+font-size: 21px;
+}
+.first_date_btn{
+height: 55px;
+position: sticky;
+padding-left: 20px;
+padding-right: 10px;
+margin: 0px;
+border-top:0px solid;
+border-bottom:0px solid;
+border-left:1px solid grey;
+border-right:1px solid grey;
+width: 180px;
+font-family: Abyssinica SIL;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+color: #757575;
+}
+.last_date_btn {
+height: 55px;
+position: sticky;
+padding-left: 20px;
+padding-right: 10px;
+margin: 0px;
+border: 0px solid;
+width: 180px;
+font-family: Abyssinica SIL;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+color: #757575;
+}
+.fa, .fas {
+font-family: ‘Font Awesome 5 Free’;
+font-weight: 900;
+background: #34BECD;
+border-radius: 100em;
+height: 30px;
+margin: 10px 0 0 -16px;
+padding: 8px 0 0;
+position: sticky;
+text-align: center;
+width: 30px;
+}

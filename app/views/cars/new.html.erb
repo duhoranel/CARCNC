@@ -2,21 +2,31 @@
   <div class="row justify-content" >
     <div class="form">
       <h3>Please enter new car's details</h3>
+      <p> </p>
       <%= form_for(@car) do |f| %>
-        
-        <p><%= f.text_field :model %>
-        <%= f.label :model %></p>
-
-        <p><%= f.number_field :capacity %>
-        <%= f.label :capacity %></p>
-
-        <p><%= f.number_field :price %>
-        <%= f.label :price %> per day</p>
-
-        <%= f.file_field :photo %>
-        <%= f.label :photo %>
-
-        <p><%= f.submit %></p>
+        <div class="form-group">
+          <%= f.label :model %></p>
+          <%= f.text_field :model, class: "form-control", placeholder: "Model" %>
+        <div>
+        <p> </p>
+        <div>
+          <%= f.label :capacity %>
+          <%= f.number_field :capacity, class: "form-control", placeholder: "Capacity" %>
+        </div>
+        <p> </p>
+        <div>
+          <%= f.label :price %>
+          <p><%= f.number_field :price, placeholder: "Price" %> per day</p>
+        </div>
+        <p> </p>
+        <div>
+          <%= f.label :photo %>
+          <%= f.file_field :photo %>
+        </div>
+        <p> </p>
+        <div>
+          <%= f.submit class: "btn btn-primary" %>
+        </div>
       <% end %>
     </div>
   </div>

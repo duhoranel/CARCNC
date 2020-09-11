@@ -2,10 +2,19 @@
   <div class="container">
     <h1>Welcome on CarCNC</h1>
     <p>Ready for a ride ?</p>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search your car" aria-label="Search">
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+
+    <div class="btn_container">
+        <%= form_tag "/cars", method: :get, class: "my_class" do %>
+        <%= text_field_tag "location", nil, placeholder: "Location", class: "location_btn" %>
+        <%= date_field "start_date", "date_input_name", class: "first_date_btn" %>
+        <%= date_field "end_date", "date_input_name", class: "last_date_btn" %>
+        <%= submit_tag "submit", class: "submit" %>
+        <% end %>
+        </div>
+        <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search">
+            </i>
+        </button>
     </div>
 </div>
 
