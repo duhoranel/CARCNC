@@ -48,13 +48,13 @@ class BookingsController < ApplicationController
   def reject
     @booking = Booking.find(params[:id])
     @booking.update(status: false)
-    redirect_to bookings_dashboard_path
+    redirect_to root_path
   end
 
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to bookings_dashboard_path
+    redirect_to root_path
   end
 
   private
