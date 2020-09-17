@@ -10,8 +10,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
-    <%= render "pages/navbar" %>
+  <body> 
+
+
+  <% unless params[:action]=="home" %>
+  <%= render "pages/navbar" %>
+  <% end %>
+    
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>

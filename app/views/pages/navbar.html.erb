@@ -6,41 +6,35 @@
  
   CARCNC</a>
 
-
-  <div class="nav-buttons">
-  <form novalidate="novalidate" class="form-inline" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-  <div class="nav-search-form-control form-group">
-  <input id="location" type="search" placeholder="Location" aria-label="Search">
-  <input type="dates" aria-label="Dates" placeholder="First date" id="first_date">
-    <div id="last_date" >
-  <input type="dates" aria-label="Dates" placeholder="Last date" >
-
-    <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search">
-      </i> 
-    </button>
-    </div>
-  </div>
-</form>
+  <div class="btn_container">
+  <%= form_tag '/cars', method: :get, class: 'my_class' do %>
+    <%= text_field_tag 'location', nil, placeholder: 'Location', class: 'location_btn ' %> 
+    <%= date_field "start_date", "date_input_name", class: 'first_date_btn' %>
+    <%= date_field "end_date", "date_input_name", class: 'last_date_btn' %>
+  
+      <%= submit_tag 'Go!', class: 'submit' %>
+  <% end %>
 </div>
 
 
 
 
 <select name="cars" class="dropdown-field">
-  
-  <option value="volvo" ></option>
-  <option value="saab">My profile</option>
-  <option value="opel">Messages</option>
-  <option value="audi">Notifications</option>
-  <option value="volvo">Saved cars</option>
-  <option value="saab">Add a new offer</option>
-  <option value="opel">Share my experience</option>
-  <option value="audi">Help</option>
-  <option value="audi">Log out</option>
-  </select>
-  <div class="pullmenu-icon"></div>
+
+<option value="volvo" ></option>
+<option value="saab">My profile</option>
+<option value="opel">Messages</option>
+<option value="audi">Notifications</option>
+<option value="volvo">Saved cars</option>
+<option value="saab">Add a new offer</option>
+<option value="opel">Share my experience</option>
+<option value="audi">Help</option>
+<option value="audi">Log out</option>
+</select>
+<div class="pullmenu-icon"></div>
+
 <%= image_tag("avatar.png", class: "avatar") %>
+
 
 
 </nav>

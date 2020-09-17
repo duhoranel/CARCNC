@@ -155,8 +155,8 @@ a:hover {
 
 .rounded-circle {
 position: fixed;
-width: 140px;
-height: 140px;
+width: 119px;
+height: 119px;
 left: 0px;
 top: 3px;
 
@@ -209,7 +209,7 @@ position: fixed;
 
 .dropdown-field {
 
-        background-color: #white;
+        background-color: white;
         top:20px;
         height:60px;
         width: 110px;
@@ -290,7 +290,7 @@ position: fixed;
 
     .btn_container {
         position: sticky;
-        width: 600px;
+        width: 650px;
         height: 65px;
         left: 400px;
         top: 80px;
@@ -303,12 +303,15 @@ position: fixed;
     }
 
     .submit {
-        width: 30px;
-        height: 20px;
-        background: #FFFFFF;
+        width: 40px;
+        height: 40px;
+        background: #34BECD;
         margin-top: 0px;
-        margin-left: 0px;
+        margin-left: 20px;
         position: sticky;
+        border: 0px solid ;
+        color: white;
+        border-radius: 100%;
     }
 
    .location_btn {
@@ -359,7 +362,48 @@ position: fixed;
     font-weight: normal;
     font-size: 17px;
     color: #757575;
+    border-right:1px solid grey;
 
    }
 
+#welcome{
+  top: 300px;
+  position: fixed;
+  font-family: Abyssinica SIL;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  color: white;
+  left: 50px;
+}
 
+
+#ready{
+  top: 340px;
+  position: fixed;
+  font-family: Abyssinica SIL;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: white;
+  left: 75px;
+}
+
+
+.nav-rounded-circle {
+  position: fixed;
+  width: 100px;
+  height: 38px;
+  left: 124px;
+  top: 50px;
+  
+  font-family: Aclonica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 34px;
+  
+  color: #000000;
+  
+  
+}

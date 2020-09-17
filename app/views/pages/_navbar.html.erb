@@ -1,20 +1,40 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path(@car), class: "navbar-brand" do %>
-    <%= image_tag "logo.png" %><strong>CarCNC</strong>
-  <% end %>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to "Dashboard", bookings_dashboard_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Add a new car", new_car_path, class: "nav-link" %>
-      </li>
-  </div>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-  </form>
-  <%= link_to "Log out", "#", class: "btn btn-ghost" %>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <%= link_to root_path, class: "home-button" do %>
+
+    <%= image_tag("logo.png", class: "rounded-circle") %> CARCNC
+    <% end %>
+
+  <div class="btn_container">
+  <%= form_tag '/cars', method: :get, class: 'my_class' do %>
+    <%= text_field_tag 'location', nil, placeholder: 'Location', class: 'location_btn ' %> 
+    <%= date_field_tag "start_date", "date_input_name", class: 'first_date_btn' %>
+    <%= date_field_tag "end_date", "date_input_name", class: 'last_date_btn' %>
+  
+      <%= submit_tag 'Go!', class: 'submit' %>
+  <% end %>
 </div>
+
+
+
+
+<select name="cars" class="dropdown-field">
+
+<option value="volvo" ></option>
+<option value="saab">My profile</option>
+<option value="opel">Messages</option>
+<option value="audi">Notifications</option>
+<option value="volvo">Saved cars</option>
+<option value="saab">Add a new offer</option>
+<option value="opel">Share my experience</option>
+<option value="audi">Help</option>
+<option value="audi">Log out</option>
+</select>
+<div class="pullmenu-icon"></div>
+
+<%= image_tag("avatar.png", class: "avatar") %>
+
+
+
+</nav>
