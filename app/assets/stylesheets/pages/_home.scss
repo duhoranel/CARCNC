@@ -7,6 +7,9 @@
 
   nav { background-image: url("Car.jpg");
     background-size: cover;
+    height: 130px;
+    width: 1500px;
+    margin-top: -15px;
   }
 
   .bg-img { background-image: url("Car.jpg");
@@ -14,6 +17,7 @@
   width: 100%;
   height: 100%;
   background-size: cover;
+  margin-top: -15px;
   
 
   }
@@ -28,7 +32,8 @@
   
  
 
-  #location {
+  .location {
+      padding: 20px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     height: 65px;
@@ -39,21 +44,27 @@
     font-size: 24px;
     line-height: 30px;
     color: #000000;
+    border:0px solid;
   }
 
-  #first_date {
-    height: 65px;
+  .first_date {
+    padding: 20px;
+    height: 45px;
     width: 200px;
     font-family: Abyssinica SIL;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 30px;
-    
+    border-top:0px solid;
+    border-bottom:0px solid;
+    border-left:1px solid grey;
+    border-right:1px solid grey;
     color: #000000;
   }
 
-  #second_date {
+  .last_date {
+    padding: 0px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     height: 65px;
@@ -65,6 +76,12 @@
     line-height: 30px;
     
     color: #000000;
+    display:flex;
+    input {
+        width:150px;
+        border:0px solid ;
+
+    }
   }
   
 
@@ -78,25 +95,17 @@
     background: #FFFFFF;
     border-radius: 50px;
    
+   
 }
   .button {
     
-    width: 52px;
-    height: 52px;
+    width: 60px;
+    height: 60px;
     left: 793px;
     top: 117px;
     
     background: #34BECD;
   }
-
-
-  /*Font Color*/
-$button-buy-font-color:#2c2b2b;
-$button-try-font-color:#2c2b2b;
-
-/*Font Color - Hover*/
-$button-buy-font-color-hover:#2c2b2b;
-$button-try-font-color-hover:#2c2b2b;
 
 html, body, div, span {
     border: 0 none;
@@ -118,26 +127,7 @@ a:hover {
     color: #ffffff;
 }
 
-/*
-section.section_button {
-    overflow: auto;
-    padding: 0 !important;
-}
-.buttons.button_center {
-    float: none;
-    margin: 0 auto;
-}
-.buttons.button_external {
-    display: block;
-    margin: 15px auto;
-}
-.section_button .buttons.button_right {
-    float: right;
-}
-.section_button .buttons.button_left {
-    float: left;
-}
-*/
+
 
 .buttons span {
     background: #34becd;
@@ -152,114 +142,21 @@ section.section_button {
     height: 52px;
     margin: 10px 0 0 -16px;
     padding: 8px 0 0;
-    position: relative;
+    position: fixed;
     text-align: center;
     width: 52px;
     z-index: 99;
     left: 700px;
-    top: 117px;
-}
-
-a.button_buy {
-    background: rgba(0, 0, 0, 0) ;
-    border-bottom-left-radius: 25px;
-    border-top-left-radius: 25px;
-    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset;
-    color: $button-buy-font-color;
-    display: block;
-    float: left;
-    font-size: 135%;
-    font-weight: bold;
-    height: 51px;
-    padding: 15px 0 0;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-
-    width: 177px;
-    z-index: 20;
-}
-a.button_buy:hover {
-    background: rgba(0, 0, 0, 0) ;
-    color: $button-buy-font-color-hover;
-}
-a.button_try {
-    background: rgba(0, 0, 0, 0) ;
-    border-bottom-right-radius: 25px;
-    border-top-right-radius: 25px;
-    box-shadow: 0 2px 0 rgba(255, 255, 255, 0.5) inset;
-    color:   $button-try-font-color;
-    display: block;
-    float: left;
-    font-size: 135%;
-    font-weight: bold;
-    height: 51px;
-    margin-left: -16px;
-    padding: 15px 0 0;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    
-    width: 177px;
-    z-index: 20;
-}
-a.button_try:hover {
-    background: rgba(0, 0, 0, 0) ;
-    
-    color: $button-try-font-color-hover;
-}
-
-a.button_buy:activea.button_try:active:active, input.submit:active {
-    box-shadow: 0 -2px 0 rgba(255, 255, 255, 0.4) inset;
-    outline: medium none;
+    top: 150px;
 }
 
 
 
-.fa, .fas {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    background: #34becd;
-    border-radius: 100em;
-   
-    height: 32px;
-    margin: 10px 0 0 -16px;
-    padding: 8px 0 0;
-    position: relative;
-    text-align: center;
-    width: 32px;
-    
-    
-   
-}
-
-
-
-.avatar_container {
-position: fixed;
-width: 135px;
-height: 62px;
-left: 1300px;
-top: 21px;
-
-background: #FFFFFF;
-border-radius: 50px;
-}
-
-
-
-.dropdown {
-position: fixed;
-width: 37px;
-height: 43px;
-top: 30px;
-
-}
 
 .rounded-circle {
 position: fixed;
-width: 140px;
-height: 140px;
+width: 119px;
+height: 119px;
 left: 0px;
 top: 3px;
 
@@ -295,7 +192,7 @@ color: #000000;
 */
 
 
-.calendar-card {
+#calendar{
     border: 1px solid rgba(0,0,0,.125);
     width: 400px;
     border-radius: 10px;
@@ -309,79 +206,201 @@ top: 30px;
 position: fixed;
 }
 
-.btn_container {
-  position: sticky;
-  width: 600px;
-  height: 65px;
-  left: 400px;
-  top: 80px;
-  background: #FFFFFF;
-  border-radius: 50px;
- border: 1px solid grey;
- padding: 0px;
+.dropdown-field {
+
+        background-color: white;
+        top:20px;
+        height:60px;
+        width: 110px;
+        left: 1320px;
+        position:fixed;
+       
 }
-.submit {
-  width: 30px;
-  height: 20px;
-  background: #FFFFFF;
-  margin-top: 0px;
-  margin-left: 0px;
-  position: sticky;
+
+
+      select {
+
+        /* styling */
+        background-color: white ;
+        border: thin solid grey;
+        border-radius: 30px;
+        display: inline-block;
+        font: inherit;
+        line-height: 1.5em;
+        padding: 0.5em 3.5em 0.5em 1em;
+      
+        /* reset */
+      
+        -webkit-appearance: none;
+      }
+
+      .nav-buttons {
+        position: sticky;
+        height: 65px;
+        left: 400px;
+        top: 20px;
+        
+        background: #FFFFFF;
+        border-radius: 50px;
+       
+    }
+
+
+    .nav-search-form-control {
+        border: 1px solid grey;
+        border-radius: 50px;
+    }
+
+    .pullmenu-icon {
+        width: 25px;
+        height: 3px;
+        background:  grey;
+        position: fixed;
+        left: 1340px;
+        top: 40px;
+        transition: opacity .0s ease-in-out;
+    
+    
+    &:after {
+        content: '';
+        width: 25px;
+        height: 3px;
+        background: grey;
+        position: absolute;
+        top: 14px;
+        left: 0px;
+      }
+      
+      &:before {
+        content: '';
+        width: 25px;
+        height: 3px;
+        background: grey;
+        position: absolute;
+        top: 7px; 
+        left: 0;
+      }
+    }
+
+    #new_booking {
+        display: flex;
+    }
+
+
+    .btn_container {
+        position: sticky;
+        width: 650px;
+        height: 65px;
+        left: 400px;
+        top: 80px;
+        
+        background: #FFFFFF;
+        border-radius: 50px;
+       border: 1px solid grey;
+       padding: 0px;
+
+    }
+
+    .submit {
+        width: 40px;
+        height: 40px;
+        background: #34BECD;
+        margin-top: 0px;
+        margin-left: 20px;
+        position: sticky;
+        border: 0px solid ;
+        color: white;
+        border-radius: 100%;
+    }
+
+   .location_btn {
+    height: 60px;
+    width: 190px;
+    position: sticky;
+    padding-left: 30px;
+    margin: 0px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: 0px solid;
+    font-family: Abyssinica SIL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    
+   }
+
+   .first_date_btn{
+    height: 55px;
+    position: sticky;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin: 0px;
+    border-top:0px solid;
+    border-bottom:0px solid;
+    border-left:1px solid grey;
+    border-right:1px solid grey;
+    width: 180px;
+    font-family: Abyssinica SIL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: #757575;
+   }
+
+   .last_date_btn {
+    height: 55px;
+    position: sticky;
+    padding-left: 20px;
+    padding-right: 10px;
+
+    margin: 0px;
+    border: 0px solid;
+    width: 180px;
+    font-family: Abyssinica SIL;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    color: #757575;
+    border-right:1px solid grey;
+
+   }
+
+#welcome{
+  top: 300px;
+  position: fixed;
+  font-family: Abyssinica SIL;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  color: white;
+  left: 50px;
 }
-.location_btn {
-height: 60px;
-width: 190px;
-position: sticky;
-padding-left: 30px;
-margin: 0px;
-border-top-left-radius: 50px;
-border-bottom-left-radius: 50px;
-border: 0px solid;
-font-family: Abyssinica SIL;
-font-style: normal;
-font-weight: normal;
-font-size: 21px;
+
+
+#ready{
+  top: 340px;
+  position: fixed;
+  font-family: Abyssinica SIL;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  color: white;
+  left: 75px;
 }
-.first_date_btn{
-height: 55px;
-position: sticky;
-padding-left: 20px;
-padding-right: 10px;
-margin: 0px;
-border-top:0px solid;
-border-bottom:0px solid;
-border-left:1px solid grey;
-border-right:1px solid grey;
-width: 180px;
-font-family: Abyssinica SIL;
-font-style: normal;
-font-weight: normal;
-font-size: 17px;
-color: #757575;
-}
-.last_date_btn {
-height: 55px;
-position: sticky;
-padding-left: 20px;
-padding-right: 10px;
-margin: 0px;
-border: 0px solid;
-width: 180px;
-font-family: Abyssinica SIL;
-font-style: normal;
-font-weight: normal;
-font-size: 17px;
-color: #757575;
-}
-.fa, .fas {
-font-family: ‘Font Awesome 5 Free’;
-font-weight: 900;
-background: #34BECD;
-border-radius: 100em;
-height: 30px;
-margin: 10px 0 0 -16px;
-padding: 8px 0 0;
-position: sticky;
-text-align: center;
-width: 30px;
+
+
+.nav-rounded-circle {
+  position: fixed;
+  width: 100px;
+  height: 38px;
+  left: 124px;
+  top: 50px;
+  
+  font-family: Aclonica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 34px;
+  
+  color: #000000;
 }

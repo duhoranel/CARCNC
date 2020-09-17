@@ -1,25 +1,19 @@
-<div class="container">
-<div class="bg-img">
-</div>
-  <div>
-    <h3>Your results for Montreal</h3>
-    <p> </p>
-  </div>
+<h1>Cars available in <%= @location %> from <%= @start_date %> to <%= @end_date %></h1>
 
   <div class="row justify-content-start">
     <% @cars.each do |car|  %>
       <div class="col-sm-12 col-md-6 col-lg-4">
         <div class="card" style="width: 18rem;">
-          <%= cl_image_tag car.photo.key, height: 180, width: 286, crop: :fill %>
+          <%= image_tag car.photo.variant(resize_to_limit: [240, 286]) if car.photo.attached? %>
           <div class="card-body">
             <h4 class="card-title"><strong><%= car.model %></strong></h4>
-              <p><%= car.capacity %> persons</p>
-              <p><%= car.price %>$ /per day</p>
+            <p><%= car.capacity %> persons</p>
+            <p><%= car.price %>$ /per day</p>
             <%= link_to "Book now", car_path(car), class: "btn btn-info" %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
-  <p> </p>
+
 </div>

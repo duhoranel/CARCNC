@@ -1,16 +1,16 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-  <%= link_to root_path, class: "home-button" do %>
-
-    <%= image_tag("logo.png", class: "rounded-circle") %> CARCNC
-    <% end %>
+  <a class="home-button" href="#">
+  <%= image_tag("logo.png", class: "rounded-circle") %>
+ 
+  CARCNC</a>
 
   <div class="btn_container">
   <%= form_tag '/cars', method: :get, class: 'my_class' do %>
     <%= text_field_tag 'location', nil, placeholder: 'Location', class: 'location_btn ' %> 
-    <%= date_field_tag "start_date", "date_input_name", class: 'first_date_btn' %>
-    <%= date_field_tag "end_date", "date_input_name", class: 'last_date_btn' %>
+    <%= date_field "start_date", "date_input_name", class: 'first_date_btn' %>
+    <%= date_field "end_date", "date_input_name", class: 'last_date_btn' %>
   
       <%= submit_tag 'Go!', class: 'submit' %>
   <% end %>
@@ -34,6 +34,7 @@
 <div class="pullmenu-icon"></div>
 
 <%= image_tag("avatar.png", class: "avatar") %>
+
 
 
 </nav>

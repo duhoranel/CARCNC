@@ -1,25 +1,47 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.mopar.ca/assets/img/2020/hero-slides/accessories/gladiator-bg-xl.jpg);">
-  <div class="container">
-    <h1>Welcome on CarCNC</h1>
-    <p>Ready for a ride ?</p>
+
+
+  <div class="bg-img">
+    <%= link_to root_path, class: "home-button" do %>
+
+      <%= image_tag("logo.png", class: "rounded-circle") %> CARCNC
+      <% end %>
 
     <div class="btn_container">
-        <%= form_tag "/cars", method: :get, class: "my_class" do %>
-        <%= text_field_tag "location", nil, placeholder: "Location", class: "location_btn" %>
-        <%= date_field "start_date", "date_input_name", class: "first_date_btn" %>
-        <%= date_field "end_date", "date_input_name", class: "last_date_btn" %>
-        <%= submit_tag "submit", class: "submit" %>
-        <% end %>
-        </div>
-        <button name="button" type="submit" class="btn btn-flat">
-            <i class="fas fa-search">
-            </i>
-        </button>
+    <%= form_tag '/cars', method: :get, class: 'my_class' do %>
+      <%= text_field_tag 'location', nil, placeholder: 'Location', class: 'location_btn ' %> 
+      <%= date_field_tag "start_date", "date_input_name", class: 'first_date_btn' %>
+      <%= date_field_tag "end_date", "date_input_name", class: 'last_date_btn' %>
+    
+        <%= submit_tag 'Go!', class: 'submit' %>
+    <% end %>
     </div>
-</div>
+  
 
+  
+ 
+<select name="cars" class="dropdown-field">
+  
+  <option value="volvo" ></option>
+  <option value="saab">My profile</option>
+  <option value="opel">Messages</option>
+  <option value="audi">Notifications</option>
+  <option value="volvo">Saved cars</option>
+  <option value="saab">Add a new offer</option>
+  <option value="opel">Share my experience</option>
+  <option value="audi">Help</option>
+  <option value="audi">Log out</option>
+  </select>
+  <div class="pullmenu-icon"></div>
+
+<%= image_tag("avatar.png", class: "avatar") %>
+
+
+    <h1 id="welcome">Welcome on CarCNC</h1>
+    <p id="ready">Ready for a ride ?</p>
+    
 <!-- Optional JavaScript for bootstrap -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</div>
